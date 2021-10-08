@@ -1,19 +1,35 @@
+$container-size: 200px;
+
 .example-container {
-    width: 100%;
-    height: 100%;
+    width: $container-size;
+    height: 92vh;
     background-color: white;
   }
   
   .example-sidenav-content {
     display: flex;
     height: 100%;
-    width: 5%;
+    width: 100%;
     align-items: left;
     justify-content: left;
-    background-color: transparent;
+    background-color: grey;
   }
   
   .example-sidenav {
     padding: 20px;
     background-color: lightgray;
+    width: $container-size;
+  }
+
+  .example-container ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  .example-container li{
+    margin-bottom: 10px;
+  }
+
+  .example-container a{
+    text-decoration:none;
   }
