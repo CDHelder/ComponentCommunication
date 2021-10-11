@@ -12,7 +12,7 @@ $container-size: 200px;
     width: 100%;
     align-items: left;
     justify-content: left;
-    background-color: grey;
+    background-color: transparent;
   }
   
   .example-sidenav {
@@ -27,7 +27,7 @@ $container-size: 200px;
   }
 
   .example-container li{
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   .example-container a{
