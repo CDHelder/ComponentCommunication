@@ -12,8 +12,9 @@ import { DataService } from 'src/app/Services/data.service';
 export class PostsComponent implements OnInit {
 
   posts!: Post[];
+  selectedId!: number;
 
-  constructor(private service: DataService, private router: Router) { }
+  constructor(private service: DataService) { }
 
   ngOnInit(): void {
     this.service.getPosts().subscribe(posts => this.posts = posts.slice(0,10))
@@ -22,6 +23,7 @@ export class PostsComponent implements OnInit {
 
   displayDetails(id: number){
     console.log("Go to:",  id)
-    this.router.navigate(["./posts", id])
+    this.selectedId = id;
+    //this.router.navigate(["./posts", id])
   }
 }

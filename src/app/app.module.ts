@@ -8,13 +8,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { PostsComponent } from './PageComponents/posts/posts.component';
 import { HomeComponent } from './PageComponents/home/home.component';
 import { UsersComponent } from './PageComponents/users/users.component';
 import { PostdetailsComponent } from './PageComponents/postdetails/postdetails.component';
-
+import { UserdialogComponent } from './PageComponents/userdialog/userdialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +24,11 @@ import { PostdetailsComponent } from './PageComponents/postdetails/postdetails.c
     PostsComponent,
     HomeComponent,
     UsersComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
+    UserdialogComponent
   ],
   imports: [
+    MatDialogModule,
     MatToolbarModule,
     HttpClientModule,
     MatSidenavModule,

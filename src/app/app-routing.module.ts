@@ -14,9 +14,6 @@ const routes: Routes = [
     path: 'posts', component: PostsComponent
   },
   {
-    path: 'posts/:id', component: PostdetailsComponent
-  },
-  {
     path: 'users', component: UsersComponent
   }
   

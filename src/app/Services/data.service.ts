@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Post } from '../Objects/post';
+import { Post, User } from '../Objects/post';
 import { map } from 'rxjs/operators'
 
 @Injectable({
@@ -25,9 +25,9 @@ export class DataService {
     return this.getPosts().pipe(map(x => x.find(p => p.id === id)!))
   }
 
-  getUsers() : Observable<string[]>
+  getUsers() : Observable<User[]>
   {
-    return this.http.get<string[]>(this.usersUrl);
+    return this.http.get<User[]>(this.usersUrl);
   }
 
   // getUser(id: number): Observable<string> {

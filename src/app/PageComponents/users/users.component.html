@@ -1,1 +1,5 @@
-<h1>USERS WERKT</h1>
+<ng-container *ngFor="let user of users">
+    <div class="ngcell" (click)="openDialog(user.id)">
+        <h2>{{user.name}}</h2>
+    </div>
+</ng-container>

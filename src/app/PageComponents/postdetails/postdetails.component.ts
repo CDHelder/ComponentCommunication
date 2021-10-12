@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/Objects/post';
 import { DataService } from 'src/app/Services/data.service';
@@ -8,18 +8,20 @@ import { DataService } from 'src/app/Services/data.service';
   templateUrl: './postdetails.component.html',
   styleUrls: ['./postdetails.component.scss']
 })
-export class PostdetailsComponent implements OnInit {
+export class PostdetailsComponent implements OnChanges {
 
+  @Input()
   id!: number;
+
   post: Post = {} as Post;
 
-  constructor(private activatedroute:ActivatedRoute, private service: DataService, private router: Router) { 
+  constructor(private service: DataService, private router: Router) { 
 
   }
 
-  ngOnInit(): void {
-    this.id = Number(this.activatedroute.snapshot.paramMap.get("id"));
-    console.log("Postdetails got the id: ", this.id);
+  ngOnChanges(): void {
+    // this.id = Number(this.activatedroute.snapshot.paramMap.get("id"));
+    // console.log("Postdetails got the id: ", this.id);
 
     this.service.getPost(this.id).subscribe(y => this.post = y);
     console.log(this.post.title);

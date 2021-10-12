@@ -2,3 +2,10 @@
     border: black 1px;
     background-color: lightgray;
 }
+
+.wrapper{
+    flex: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+}
